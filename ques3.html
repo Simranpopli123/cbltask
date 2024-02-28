@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const string1=['J','Z','D','Q','L','W','A','H','Y','K','G','N','V','R','P','X','C','M','F','O','U','S','I','E','T','B'];
+    
+    function sorting (str) {
+  let i = 0,j;
+    
+  for(let i=0;i<str.length;i++) {
+
+   for(j=i+1;j<str.length;j++) {
+
+      if (str[j] < str[i]) {
+        let temp = str[i]
+        str[i] = str[j]
+        str[j] = temp
+      }
+      
+    }
+    
+  }
+}
+
+ 
+// Call string_sort method
+sorting(string1)
+ 
+console.log('After sorting')
+ 
+// Print sorted string array
+console.log("sorted strings" +"=>"+" "+ string1);
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Array1=[];
+        async function getdata(){
+            try{
+
+            const myData=await fetch("https://jsonplaceholder.typicode.com/posts")
+            
+            return myData.json();
+            }
+            catch(error)
+            {
+                alert(`the error${error}`);
+            }
+            
+                
+
+            
+
+           
+            
+        }
+       async function displayData()
+        {
+            var user= await getdata();
+           // console.log(user);
+            for(let i=0;i<5;i++)
+            {
+            Array1.push(user[i].title);
+            }
+            return Array1;
+        }
+         async function finalData()
+         {
+       var collection= await displayData();
+       console.log(collection);
+         }
+         finalData();
+    </script>
+    
+</body>
+</html>
